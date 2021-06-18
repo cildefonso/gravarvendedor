@@ -1,0 +1,15 @@
+kafka:
+  bootstrap-servers: 127.0.0.1:9092
+  consumergroup: gravarvendedor_group
+  topicgravardados: topic_gravar_dados_arquivo_s1
+  producer:
+    max:
+      request:
+        size: 231072000
+    batch-size: 60000000
+    buffer-memory: 60000000
+  client-id: garvarvendedor_producer
+  consumer:
+    group-id: gravarvendedor_group
+    auto-offset-reset: earliest
+    enable-auto-commit: false
